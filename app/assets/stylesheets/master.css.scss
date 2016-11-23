@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
 @import "bootstrap-sprockets";
 @import "bootstrap";
 .clear{
@@ -37,13 +38,21 @@
 .links a {
   color: black;
   font-size: 25px;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 10px solid #dfdfdf;
 }
 
 header {
-    border-top: 9px solid #222222;
+    border-top: 10px solid #222222;
 }
 
 hr {
   clear: both;
+}
+
+h1 {
+  font-family: 'Bungee Inline', cursive;
+}
+
+h2 {
+  font-family: 'Bungee Inline', cursive;
 }
