@@ -4,8 +4,8 @@
     <title>Splurty</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
   <body>
@@ -18,18 +18,32 @@
           by
           <br />
           doing
+
         </div>
      </div>
-     <div class="col-xs-4 slogan">
+     <div class="col-xs-6 slogan">
         first ruby app in refugees on rails program
      </div>
-     <div class="col-xs-5 links">
-        <% link_to 'contribute','#' %> 
-        <% link_to 'about','#' %>   
+     <div class="col-xs-3 links">
+        <%= link_to 'contribute','#' %> 
+        <%= link_to 'about','#' %>
      </div>
   </header>
   <hr/>
   <br class="clear" />
+  <div class="container">
     <%= yield %>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="col-xs-6">
+        <%= link_to"This isn't enough, I need more","#", class: 'next-quote' %>
+      </div>
+      <div class="col-xs-6 footer-blurb">
+        Proudly hacked in Hamburg by <a href="http://wesamkiwan.getforge.io">Wesam &amp; ROR team</a><br />
+        Want to build your own Splurty Web App - <a href="http://wesamkiwan.getforge.io">Learn how to code here</a>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
